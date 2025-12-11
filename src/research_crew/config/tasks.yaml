@@ -1,0 +1,89 @@
+---
+research_strategy_development:
+  description: Analyze the research topic "{research_topic}" and develop a comprehensive
+    research strategy. Break down the topic into 5-7 key subtopics and research areas.
+    Create optimized search queries for academic databases. Identify the most relevant
+    research domains, time periods to focus on, and key concepts that should be explored.
+    Output should include specific search terms, Boolean operators, and research focus
+    areas.
+  expected_output: 'A detailed research strategy document containing: (1) 5-7 key
+    subtopics and research areas, (2) 10-15 optimized search queries with Boolean
+    operators, (3) recommended time frame for literature search, (4) key research
+    domains to explore, and (5) important concepts and terminology to include in searches.'
+  agent: research_planner
+academic_paper_collection:
+  description: 'STEP 1: Use ArxivPaperTool to search for "{research_topic}" papers
+    on ArXiv. STEP 2: Use SerplyScholarSearchTool to search for "{research_topic}"
+    in academic databases with queries like "solar energy efficiency", "photovoltaic
+    systems", "solar panel performance". STEP 3: Use ScrapeWebsiteTool to get additional
+    details from any paper URLs found. Document each search attempt. If tools return
+    no results, state "No papers found despite tool searches" - do NOT create fictional
+    papers.'
+  expected_output: 'A list of REAL academic papers found through actual searches.
+    For each paper, include: exact title, all author names, journal/conference, publication
+    year, DOI/URL if available, and brief summary. If searches return no results,
+    report "Search conducted but no papers retrieved" and list the specific search
+    terms used. DO NOT create fictional papers with generic titles or fake author
+    names.'
+  agent: paper_retriever
+  context:
+  - research_strategy_development
+paper_content_extraction:
+  description: 'Extract and organize key information from each collected research
+    paper. For accessible papers, read full content when possible. For each paper,
+    extract: methodology used, datasets/data sources, main findings/results, limitations
+    mentioned, key contributions, and conclusions. Create structured summaries that
+    capture the essence of each paper''s approach and findings related to "{research_topic}".'
+  expected_output: 'Structured summaries for each paper containing: (1) methodology
+    and approach, (2) datasets/data sources used, (3) key findings and results, (4)
+    stated limitations, (5) main contributions, and (6) conclusions. Include comparison-ready
+    format with consistent structure across all paper summaries.'
+  agent: content_extractor
+  context:
+  - academic_paper_collection
+methodology_and_results_analysis:
+  description: Conduct comprehensive analysis of research methodologies, experimental
+    designs, and results from all extracted papers on "{research_topic}". Compare
+    different approaches, identify patterns and trends, evaluate effectiveness of
+    various methodologies, and highlight innovative techniques. Analyze how different
+    datasets and approaches led to different outcomes. Create comparative analysis
+    showing evolution of methods over time.
+  expected_output: 'Comprehensive methodology analysis including: (1) comparison table
+    of all methodologies used, (2) trends in research approaches over time, (3) effectiveness
+    evaluation of different methods, (4) dataset analysis and comparison, (5) innovative
+    techniques identification, and (6) methodology recommendations for future research.'
+  agent: analysis_agent
+  context:
+  - paper_content_extraction
+critical_literature_evaluation:
+  description: Critically evaluate all research papers and findings on "{research_topic}".
+    Identify limitations, methodological weaknesses, contradictory findings, and research
+    gaps. Look for studies that might be missing important controls, have limited
+    datasets, or draw conclusions that aren't fully supported. Identify areas where
+    the current literature is insufficient and highlight contradictions between different
+    studies.
+  expected_output: 'Critical evaluation report containing: (1) identified limitations
+    in current research, (2) methodological weaknesses and concerns, (3) contradictory
+    findings between studies with analysis, (4) significant research gaps and unexplored
+    areas, (5) questions raised by current literature, and (6) recommendations for
+    addressing identified issues.'
+  agent: critic_agent
+  context:
+  - paper_content_extraction
+comprehensive_literature_review_synthesis:
+  description: 'Synthesize all research findings, analyses, and critical evaluations
+    into a comprehensive literature review document for "{research_topic}". Create
+    a well-structured academic document with clear sections: Introduction, Paper Summaries,
+    Methodology Analysis, Key Findings, Research Gaps, and Future Directions. Include
+    comparison tables and actionable insights. Ensure the review tells a coherent
+    story about the current state of research in this field.'
+  expected_output: 'A complete literature review document in markdown format with:
+    (1) Executive Summary, (2) Introduction to the research area, (3) Individual paper
+    summaries organized by theme, (4) Methodology comparison table, (5) Key findings
+    and trends analysis, (6) Research gaps and limitations, (7) Future research directions,
+    and (8) Conclusion. Also provide a separate JSON metadata file with structured
+    information about all analyzed papers.'
+  agent: synthesis_agent
+  context:
+  - methodology_and_results_analysis
+  - critical_literature_evaluation

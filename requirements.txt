@@ -1,0 +1,12 @@
+crewai>=1.2.0
+crewai-tools
+langchain-google-genai
+requests
+beautifulsoup4
+arxiv
+feedparser
+pandas
+numpy
+pydantic
+python-dotenv
+pyyaml
