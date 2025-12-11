@@ -1,0 +1,136 @@
+{
+  "literature_review": "\n<h1>Systematic Literature Review: test</h1>\n<h2>Executive Summary</h2>\n<p>This automated literature review synthesizes findings from 1 papers on <strong>test</strong>. It includes per-paper summaries, a detailed methodology comparison, trends across years, identified research gaps, and actionable recommendations.</p>\n\n<h2>Key Findings</h2>\n<p>The analysis identified <strong>unspecified</strong> as the most frequently used methodology. Trends and yearly coverage indicate 1 years covered with peak activity in 2019.</p>\n\n<h2>Methodology Comparison</h2>\n<table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"><thead><tr><th>Methodology</th><th>Count</th><th>Percentage</th><th>Avg Relevance</th></tr></thead><tbody>\n<tr><td>unspecified</td><td>1</td><td>100.0%</td><td>0.85</td></tr>\n</tbody></table>\n\n<h2>Per-paper Summaries</h2>\n<h3>1. Machine Learning Testing: Survey, Landscapes and Horizons (2019)</h3><p><em>Authors:</em> Jie M. Zhang, Mark Harman, Lei Ma, Yang Liu</p><p><strong>Abstract summary:</strong> This paper provides a comprehensive survey of Machine Learning Testing (ML\ntesting) research. It covers 144 papers on testing properties (e.g.,\ncorrectness, robustness, and fairness), testing components (e.g., the data,\nlearning program, and framework), testing workflow (e.g., test generation and\ntest evaluation), and application scenarios (e.g., autonomous driving, machine\ntranslation). The paper also analyses trends concerning datasets, research\ntrends, and research focus, concluding with research challenges and promising\nresearch directions in ML testing.</p><p><a href=\"http://arxiv.org/abs/1906.10742v2\">View Paper</a></p>\n\n<h2>Research Gaps</h2>\n<ul>\n<li>Exploration of cross-disciplinary applications.</li><li>Need for standardized evaluation metrics.</li></ul>\n<h2>Recommendations</h2><ol>\n<li>Incorporate real-world data for validation.</li><li>Develop benchmarks for comparing different approaches.</li></ol>\n<h2>References</h2><ol><li>Jie M. Zhang, Mark Harman, Lei Ma, Yang Liu (2019). Machine Learning Testing: Survey, Landscapes and Horizons.</li></ol><h2>Conclusion</h2><p>This review provides a synthesized snapshot of the state-of-the-art for test. Use the references and per-paper summaries to dive deeper into specific works.</p>",
+  "ResearchPlannerAgent": {
+    "topic": "test",
+    "subtopics": [
+      "test subtopic 1",
+      "test subtopic 2",
+      "test subtopic 3",
+      "test subtopic 4",
+      "test subtopic 5"
+    ],
+    "queries": [
+      "test research 1",
+      "test research 2",
+      "test research 3",
+      "test research 4",
+      "test research 5",
+      "test research 6",
+      "test research 7",
+      "test research 8",
+      "test research 9",
+      "test research 10"
+    ]
+  },
+  "PaperRetrieverAgent": {
+    "papers": [
+      {
+        "title": "Machine Learning Testing: Survey, Landscapes and Horizons",
+        "authors": [
+          "Jie M. Zhang",
+          "Mark Harman",
+          "Lei Ma",
+          "Yang Liu"
+        ],
+        "abstract": "This paper provides a comprehensive survey of Machine Learning Testing (ML\ntesting) research. It covers 144 papers on testing properties (e.g.,\ncorrectness, robustness, and fairness), testing components (e.g., the data,\nlearning program, and framework), testing workflow (e.g., test generation and\ntest evaluation), and application scenarios (e.g., autonomous driving, machine\ntranslation). The paper also analyses trends concerning datasets, research\ntrends, and research focus, concluding with research challenges and promising\nresearch directions in ML testing.",
+        "year": "2019",
+        "url": "http://arxiv.org/abs/1906.10742v2",
+        "pdf_url": "http://arxiv.org/pdf/1906.10742v2",
+        "source": "arxiv"
+      }
+    ],
+    "count": 1
+  },
+  "ContentExtractorAgent": {
+    "extracted_papers": [
+      {
+        "title": "Machine Learning Testing: Survey, Landscapes and Horizons",
+        "authors": [
+          "Jie M. Zhang",
+          "Mark Harman",
+          "Lei Ma",
+          "Yang Liu"
+        ],
+        "abstract": "This paper provides a comprehensive survey of Machine Learning Testing (ML\ntesting) research. It covers 144 papers on testing properties (e.g.,\ncorrectness, robustness, and fairness), testing components (e.g., the data,\nlearning program, and framework), testing workflow (e.g., test generation and\ntest evaluation), and application scenarios (e.g., autonomous driving, machine\ntranslation). The paper also analyses trends concerning datasets, research\ntrends, and research focus, concluding with research challenges and promising\nresearch directions in ML testing.",
+        "methodology": [
+          "unspecified"
+        ],
+        "year": "2019",
+        "url": "http://arxiv.org/abs/1906.10742v2"
+      }
+    ],
+    "total_papers": 1
+  },
+  "AnalysisAgent": {
+    "methodology_comparison": {
+      "comparison_table": [
+        {
+          "methodology": "unspecified",
+          "count": 1,
+          "percentage": 100.0,
+          "avg_relevance": 0.85
+        }
+      ],
+      "total_methodologies": 1,
+      "most_common": "unspecified"
+    },
+    "trends_analysis": {
+      "yearly_trends": [
+        {
+          "year": "2019",
+          "paper_count": 1
+        }
+      ],
+      "total_years_covered": 1,
+      "peak_year": "2019"
+    },
+    "total_papers_analyzed": 1
+  },
+  "CriticAgent": {
+    "methodological_weaknesses": [
+      "Over-reliance on synthetic datasets.",
+      "Lack of longitudinal studies."
+    ],
+    "research_gaps": [
+      "Exploration of cross-disciplinary applications.",
+      "Need for standardized evaluation metrics."
+    ],
+    "contradictions": [],
+    "recommendations": [
+      "Incorporate real-world data for validation.",
+      "Develop benchmarks for comparing different approaches."
+    ]
+  },
+  "ReferenceManagerAgent": {
+    "bibtex": [
+      "@article{zhang2019machine,\n  author = {Jie M. Zhang and Mark Harman and Lei Ma and Yang Liu},\n  title = {Machine Learning Testing: Survey, Landscapes and Horizons},\n  year = {2019}\n}"
+    ],
+    "apa": [
+      "Jie M. Zhang, Mark Harman, Lei Ma, Yang Liu (2019). Machine Learning Testing: Survey, Landscapes and Horizons."
+    ],
+    "count": 1
+  },
+  "ValidatorAgent": {
+    "quality_score": 0.95,
+    "factual_accuracy": {
+      "verification_count": 1,
+      "total_checked": 1,
+      "details": [
+        {
+          "claim": "The most common methodology is unspecified.",
+          "verified": true,
+          "confidence": 0.95,
+          "supporting_sources": [
+            "Machine Learning Testing: Survey, Landscapes and Horizons"
+          ]
+        }
+      ]
+    },
+    "consistency_score": 0.9025,
+    "validation_passed": true
+  },
+  "SynthesisAgent": {
+    "literature_review": "\n<h1>Systematic Literature Review: test</h1>\n<h2>Executive Summary</h2>\n<p>This automated literature review synthesizes findings from 1 papers on <strong>test</strong>. It includes per-paper summaries, a detailed methodology comparison, trends across years, identified research gaps, and actionable recommendations.</p>\n\n<h2>Key Findings</h2>\n<p>The analysis identified <strong>unspecified</strong> as the most frequently used methodology. Trends and yearly coverage indicate 1 years covered with peak activity in 2019.</p>\n\n<h2>Methodology Comparison</h2>\n<table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"><thead><tr><th>Methodology</th><th>Count</th><th>Percentage</th><th>Avg Relevance</th></tr></thead><tbody>\n<tr><td>unspecified</td><td>1</td><td>100.0%</td><td>0.85</td></tr>\n</tbody></table>\n\n<h2>Per-paper Summaries</h2>\n<h3>1. Machine Learning Testing: Survey, Landscapes and Horizons (2019)</h3><p><em>Authors:</em> Jie M. Zhang, Mark Harman, Lei Ma, Yang Liu</p><p><strong>Abstract summary:</strong> This paper provides a comprehensive survey of Machine Learning Testing (ML\ntesting) research. It covers 144 papers on testing properties (e.g.,\ncorrectness, robustness, and fairness), testing components (e.g., the data,\nlearning program, and framework), testing workflow (e.g., test generation and\ntest evaluation), and application scenarios (e.g., autonomous driving, machine\ntranslation). The paper also analyses trends concerning datasets, research\ntrends, and research focus, concluding with research challenges and promising\nresearch directions in ML testing.</p><p><a href=\"http://arxiv.org/abs/1906.10742v2\">View Paper</a></p>\n\n<h2>Research Gaps</h2>\n<ul>\n<li>Exploration of cross-disciplinary applications.</li><li>Need for standardized evaluation metrics.</li></ul>\n<h2>Recommendations</h2><ol>\n<li>Incorporate real-world data for validation.</li><li>Develop benchmarks for comparing different approaches.</li></ol>\n<h2>References</h2><ol><li>Jie M. Zhang, Mark Harman, Lei Ma, Yang Liu (2019). Machine Learning Testing: Survey, Landscapes and Horizons.</li></ol><h2>Conclusion</h2><p>This review provides a synthesized snapshot of the state-of-the-art for test. Use the references and per-paper summaries to dive deeper into specific works.</p>",
+    "word_count": 225
+  }
+}
